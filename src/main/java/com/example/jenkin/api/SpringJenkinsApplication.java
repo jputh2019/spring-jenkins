@@ -15,9 +15,14 @@ public class SpringJenkinsApplication {
 
 	public static Logger logger= LoggerFactory.getLogger(SpringJenkinsApplication.class);
 	
-	@PostConstruct
-	public void init(String msg) {
+/*	@PostConstruct
+	public void inte(String msg) {
 		logger.info("Application started...");
+	}*/
+	@GetMapping("/ping")
+	public String message() {
+		logger.info("Application started...");
+		return "Wao!! Application Deployed successfully in SAP Cloud..";
 	}
 	public static void main(String[] args) {
 		logger.info("Application Excuted from main...");
