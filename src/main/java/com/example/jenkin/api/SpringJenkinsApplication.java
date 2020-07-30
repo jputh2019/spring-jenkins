@@ -19,9 +19,10 @@ public class SpringJenkinsApplication {
 	public void inte(String msg) {
 		logger.info("Application started...");
 	}*/
+	
 	@GetMapping("/ping")
 	public String message() {
-		logger.info("Application started...");
+		 
 		return "Wao!! Application Deployed successfully in SAP Cloud..";
 	}
 	public static void main(String[] args) {
